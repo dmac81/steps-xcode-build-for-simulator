@@ -599,6 +599,8 @@ func exportArtifacts(proj xcodeproj.XcodeProj, scheme string, schemeBuildDir str
 					} else if !exists {
 						log.Debugf("2nd path does not exist: %s", source)
 						continue
+					} else if exists {
+						destination := filepath.Join(deployDir, wrapperName)
 					}
 				}
 
