@@ -465,6 +465,7 @@ func wrapperNameForScheme(proj xcodeproj.XcodeProj, projectPath, scheme, configu
 	}
 	
 	wrapperName, err := buildSettings.String("WRAPPER_NAME")
+	log.Debugf("Wrapper Name is: %s\n", wrapperName)
 
 	if err != nil {
 		return "", fmt.Errorf("failed to parse build settings, error: %s", err)
