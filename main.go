@@ -600,7 +600,7 @@ func exportArtifacts(proj xcodeproj.XcodeProj, scheme string, schemeBuildDir str
 						log.Debugf("2nd path does not exist: %s", source)
 						continue
 					} else if exists {
-						destination := filepath.Join(deployDir, wrapperName)
+						destination = filepath.Join(deployDir, wrapperName)
 					}
 				}
 
